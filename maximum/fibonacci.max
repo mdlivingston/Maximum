@@ -1,0 +1,19 @@
+~Recursion is key!~
+println()
+maximus fibonacci(n) {
+	if(equals(n 0)) {
+		0
+	} else if(equals(n 1)) {
+		1
+	} else {
+		addition(fibonacci(subtraction(n 1)) fibonacci(subtraction(n 2)))
+	}
+}
+
+println("fibonacci 15 = " fibonacci(15))
+println("~should be 610")
+println()
+println("fibonacci of 19 is " fibonacci(19))
+println("~should be 4181")
+println()
+	

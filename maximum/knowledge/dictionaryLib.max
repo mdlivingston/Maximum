@@ -1,0 +1,27 @@
+include "knowledge/avlLib.max"
+
+class dictionary {
+
+	object tree()
+	
+	maximus create() {
+		tree = avlTree()
+	}
+	
+	maximus insertion(key value) {
+		tree.insertion(key value)
+	}
+	
+	maximus findKey(key) {
+		tree.findKey(key)
+	}
+	
+	maximus findVal(val) {
+		tree.findVal(val)
+	}
+	
+	maximus display() {
+		tree.display()
+	}
+}
+		

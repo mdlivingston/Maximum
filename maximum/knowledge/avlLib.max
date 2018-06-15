@@ -1,0 +1,204 @@
+class node {
+
+	max key()
+	max value()
+	object father()
+	object left()
+	object right()
+	object favorite()
+	
+	maximus create(k v) {
+		key = k
+		value = v
+	}
+	
+	maximus getSibby() {
+		if(isLeftChild()) {
+			father.right
+		} else {
+			father.left
+		}
+	}
+	
+	maximus isLeftChild() {
+		if(equals(father null)) {
+			false
+		} else {
+			equals(father.left this)
+		}
+	}
+	
+	maximus hasSib() {
+		if(isLeftChild()) {
+			notequals(father.right null)
+		} else {
+			notequals(father.left null)
+		}
+	}	
+}
+	
+class avlTree {
+
+	object root()
+	
+	maximus insertion(key val) {
+		object n(node(key val))
+		iHelp(root n)
+		iFixup(n)
+	}
+	
+	maximus iHelp(current new) {
+		if(equals(root null)) {
+			root = new
+		} else if(greater(new.key current.key)) {
+			if(notequals(current.right null)) {
+				iHelp(current.right new)
+			} else {
+				current.right = new
+				new.father = current
+			} 
+		} else {
+			if(notequals(current.left null)) {
+				iHelp(current.left new)
+			}
+			else {
+				current.left = new
+				new.father = current
+			}
+		}
+	}
+	
+	maximus iFixup(x) {
+		while(notequals(x root)) {
+			if(and(x.hasSib() equals(x.getSibby() x.father.favorite))) {
+				x.father.favorite = null
+				x = root
+			} else if(equals(x x.father.favorite)) {
+				object c(x.favorite)
+				if(sameLevel(c x)) {
+					if(and(notequals(x.father root) equals(x.father x.father.father.favorite))) {
+						x.father.father.favorite = x
+					}
+					rotate(x)
+					x.favorite = null
+				} else {
+					if(c.hasSib()) {
+						x.favorite = c.getSibby()
+					}
+					if(equals(x.father x.father.father.favorite)) {
+						x.father.father.favorite = c
+					}
+					rotate(c)
+					rotate(c)
+					c.favorite = null
+				}
+				x = root
+			} else {
+				x.father.favorite = x
+				x = x.father
+			}
+		}
+	}
+	
+	maximus findKey(k) {
+		findKHelp(k root)
+	}
+	
+	maximus findKHelp(k current) {
+		if(equals(current null)) {
+			null
+		} else if(equals(k current.key)) {
+			current.value
+		} else if(greater(k current.key)) {
+			findKHelp(k current.right)
+		} else {
+			findKHelp(k current.left)
+		}
+	}
+	
+	maximus findVal(v) {
+		findVHelp(v root)
+	}
+	
+	maximus findVHelp(v current) {
+		if(equals(current null)) {
+			null
+		} else if(equals(v current.value)){
+			current.key
+		} else if(greater(v current.value)) {
+			findVHelp(v current.right)
+		} else {
+			findVHelp(v current.left)
+		}
+	}
+	
+	maximus display() {
+		if(notequals(root null)) {
+			showHelper(root)
+		}
+	}
+	
+	maximus showHelper(current) {
+		if(notequals(current.left null)) {
+			showHelper(current.left)
+		}
+		println(current.key ": " current.value)
+		if(notequals(current.right null)) {
+			showHelper(current.right)
+		}
+	}
+	
+	
+	maximus rotate(x) {
+		if(x.isLeftChild()) {
+			rightRotate(x)
+		} else {
+			leftRotate(x)
+		}
+	}
+	
+	maximus sameLevel(c x) {
+		if(x.isLeftChild()) {
+			equals(c x.left)
+		} else {
+			equals(c x.right)
+		}
+	}
+				
+	maximus rightRotate(x) {
+		object p(x.father)
+		max leftChild(p.isLeftChild())
+		x.father.left = x.right
+		x.right = p
+		x.father = p.father
+		x.right.father = x
+		if(equals(x.father null)) {
+			root = x
+		} else {
+			if(leftChild) {
+				x.father.left = x
+			} else {
+				x.father.right = x
+			}
+		}
+	}
+	
+	maximus leftRotate(x) {
+		object p(x.father)
+		max leftChild(p.isLeftChild())
+		x.father.right = x.left
+		x.left = p
+		x.father = p.father
+		x.left.father = x
+		if(equals(x.father null)) {
+			root = x
+		} else {
+			if(leftChild) {
+				x.father.left = x
+			} else {
+				x.father.right = x
+			}
+		}
+	}
+}	
+		

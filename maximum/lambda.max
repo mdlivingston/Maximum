@@ -1,0 +1,13 @@
+max func(mystery (t u) { multiplication(t u) })
+println()
+println("call to lambda func is " func(3 3))
+println("~should be 9")
+println()
+print("anonymous call is " )
+
+println((mystery (t u) {
+	 multiplication(t u) 
+	} 
+	(12 2)))
+println("~should be 24")
+println()

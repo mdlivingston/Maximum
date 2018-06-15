@@ -1,0 +1,32 @@
+class Array {
+
+    array a()
+
+    maximus insertBack(item) {
+        a = appendArray(a item)
+    }
+
+    maximus insertFront(item) {
+        a = prependArray(a item)
+    }
+
+    maximus get(index) {
+        getArray(a index)
+    }
+
+    maximus set(index item) {
+        a = setArray(a index item)
+    }
+
+    maximus delete(index) {
+        a = removeArray(a index)
+    }
+
+    maximus size() {
+        sizeArray(a)
+    }
+
+    maximus display() {
+        displayArray(a)
+    }
+}

@@ -1,0 +1,34 @@
+~Functions are first class~
+~Pro Tip: Remember functions are defined with the keyword 'maximus'~
+
+println()
+maximus f(t u) {
+	division(t u)
+}
+
+println("f(20 5) = " f(20 5))
+println("~should be 4")
+println()
+
+maximus x(t) {
+	maximus b(u) {
+		addition(u t)
+	}
+	b(43.2)
+}
+
+println("x(2.8) is " x(2.8))
+println("~should be 46.0")
+println()
+
+maximus q(t) {
+	maximus b(u) {
+		subtraction(t u)
+	}
+}
+
+max var(q(4.2))
+
+println("var(2.2) is " var(2.2))
+println("~should be 2.0")
+println()

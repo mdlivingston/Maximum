@@ -1,0 +1,8 @@
+~Cannot compare these two objects~
+
+max i("Try")
+max z(2)
+
+if(lesser(i z)){
+	
+}

@@ -1,0 +1,44 @@
+println()
+
+println("Is Max equal to DPL?...")
+if(equals("max" "DPL")) {
+	println("max == DPL")
+} else {
+	println("max != DPL")
+}
+
+println()
+
+println("Is dpl == dpl?...")
+if(equals("max" "pass")) {
+	println("max == pass")
+} 
+else if(equals("dpl" "dpl")) {
+
+	println("dpl == dpl")
+
+} else {
+
+	println("Max Should Just Pass the Class")
+
+}
+
+println()
+
+println("Are the conditions true?...")
+if(and(equals(addition(19 1) 20) equals(multiplication(3 11) 33))) {
+
+	println("condtions are true")
+
+}
+
+println()
+
+println("Are any condtions true?...")
+if(or(equals(addition(11 0) 17) equals(multiplication(3 3) 9))) {
+
+	println("one condition is true")
+
+}
+
+println()

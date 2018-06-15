@@ -1,0 +1,22 @@
+include "knowledge/dictionaryLib.max"
+
+maximus testDictionary() {
+	
+	object dictionary(dictionary())
+
+	array y(1 2 3 4 5 6)
+	array z("I" "Need" "To" "Pass" "This" "Class...")
+
+	max i(0)
+
+	while(lesser(i sizeArray(y))) {
+
+		dictionary.insertion(getArray(y i) getArray(z i))
+		i = increment(i)
+
+	}
+
+	dictionary.display()
+}
+
+testDictionary()

@@ -1,0 +1,16 @@
+include "knowledge/avlLib.max"
+
+maximus runAVL() {
+	object tree(avlTree())
+	max i(0)
+	while(lesser(i 33)) {
+		tree.insertion(i addition(i 1))
+		i = increment(i)
+	}
+		
+	tree.display()
+}
+
+runAVL()
+println()
+println("Zero based indexing!")

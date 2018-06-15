@@ -1,0 +1,31 @@
+
+println("*New Test Case Of Regular Loops*")
+println()
+
+max a(0)
+
+while(lesser(a 10)) {
+    println(a)
+    a = increment(a)
+}
+println()
+
+println("*New Test Case Of Nested Loops*")
+println()
+
+max t(0)
+max u(0)
+
+while(lessEqual(t 2)) {
+    while(lessEqual(u t)) {
+        println(u)
+        u = increment(u)
+    }
+
+    t = increment(t)
+    u = 0
+
+    println()
+}
+
+println("...")
