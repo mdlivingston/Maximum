@@ -1,0 +1,231 @@
+
+This programming language is called Maximum! 
+
+It takes everything to the max! (Which, conveniently, is my name.. Max Livingston)
+
+~HOW TO BUILD MAXIMUM~
+
+While in dir 'maximum' type 'make' to build 'maximum'
+Next you may call: 'dpl youfilename.max' - this will execute your code in that file
+
+~HOW TO PERFORM A CLEAN COMPILE~
+
+Call 'make clean'
+
+Exceptional features include: 
+
+	Pretty printing: Just call 'make pretty'
+	Array indexing: Just call 'make arraysx' -to pretty print just call 'make arrays'
+	AVL Trees: Just call 'make avl' 
+
+Below is how to program in the dpl known as Maximum:
+
+~Comments~ 
+
+To comment in Maximum you use ~
+	 Example: '~ your comment here ~'
+
+~VARIABLES~
+
+To define a variable you must use the keyword 'max'. An optional initializer can be given. 
+
+The syntax for defining a variable is the following: 
+
+	max vName()
+	max vName(initializer)
+
+The syntax for assigning a variable is the following:
+
+	vName = express
+
+~FUNCTIONS~
+
+To define a variable you must use the keyword 'maximus'.
+
+The syntax for defining a function is the following: 
+	
+	maximus fName(parameters) {
+		code
+	}
+
+	Helpful Hint: Any parameters in the function must variables!
+
+The Syntax for calling a function 
+	
+	funcName(maximus initList)
+
+The keyword for anonymous functions is 'mystery' and it is defined like so:
+	
+	mystery (parameterList) {
+		code
+	}
+
+	Anonymous functions can be executed immdiately with the following syntax:
+		(mystery (parameterList) {
+			block
+		} (maximus initList))
+
+~OBJECTS~
+
+To define a object you must use the keyword 'object'.
+
+The syntax for defining an object is:
+
+	object var_name(optionalClass)
+
+The syntax for calling an object:
+
+	objectName.variable
+	objectName.function(initList)
+
+	Objects within objects are doable!
+		objName.objName... etc
+
+~Classes~
+
+To define a class you must use the keyword 'class'.
+
+The syntax for defining a class:
+	
+	class cName {
+		cName block
+	}
+
+~Arrays~ 
+
+To define an array you must use the keyword 'array'.
+
+	 array var_name(arrayInitList)
+
+~Conditionals~
+
+To implement a If statement you must follow the syntax of:
+
+	if(expres) {
+		code
+	}
+	
+
+	if(express){
+		code
+	}else if(express) {
+		code
+	} else {
+		code
+	}
+
+~Loops~
+
+	To define a loop you must you the syntax of:
+
+	while(express) {
+		code
+	}
+
+~Keywords~
+
+Below is a list of keywords that connot be redefined in Maximum:
+	
+	max
+	maximus
+	class
+	if
+	else
+	while
+	object
+	mystery
+	null
+	true
+	false
+
+~Includes~
+
+Files can be included using the keyword 'include'.
+	
+	include "yourFile.max"
+
+~Libraries~
+
+	arrayLib.max has built in functions such as:
+		-get(index)
+        -set(index thing)
+        -insertBack(thing)
+        -insertFront(thing)
+        -delete(index)
+        -size()
+        -display()
+
+    dictionaryLib.max has built in functions such as:
+        -insertion(key value)
+        -findKey(key)
+        -findVal(value)
+        -display() 
+
+    avlLib.max has built in functions such as:
+        -insertion(key value)
+        -findKey(key)
+        -findVal(value)
+        -display() // displays in-order transversal
+
+
+~Built-Ins~
+
+Below is a list of built-in operations in Maximum:
+
+	addition(oper1 oper2)
+	subtraction(oper1 oper2)
+	or(oper1 oper2)
+	and(oper1 oper2)
+	division(oper1 oper2)
+	multiplication(oper1 oper2)
+	raise(oper1 oper2)
+	equals(oper1 oper2)
+	notequals(oper1 oper2)
+	greater(oper1 oper2)
+	lesser(oper1 oper2)
+	greaterEqual(oper1 oper2)
+	lessEqual(oper1 oper2)
+	increment(oper) 
+	decrement(oper) 
+	print(para ..)
+	println(para ...)
+	appendArray(array thing) 	
+    prependArray(array thing) 	
+    displayArray(array) 		
+    getArray(array index)		
+    setArray(array index val)	
+    removeArray(array index)	
+    sizeArray(array)			
+
+~Test Cases~
+
+    make error1
+    make error1x
+    make error2
+    make error2x
+    make error3
+    make error3x
+    make error4
+    make error4x
+    make error5
+    make error5x
+    make arrays
+    make arraysx
+    make conditionals
+    make conditionalsx
+    make recursion
+    make recursionx
+    make iteration
+    make iterationx
+    make functions
+    make functionsx    
+    make lambda      
+    make lambdax      
+    make dictionary
+    make dictionary   
+    make problem
+    make problemx
+    make avl
+    make pretty
+    make grad
+    make gradx // Im not a grad student though haha
